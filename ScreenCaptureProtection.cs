@@ -52,11 +52,11 @@ public static class ScreenCaptureProtection
                 threadId
             );
 
-            Debug.WriteLine($"[ScreenCaptureProtection] CBT Hook installed on thread {threadId}: {(_hHook != IntPtr.Zero ? "Success" : "Failed")}");
+            MessageBox.Show($"[ScreenCaptureProtection] CBT Hook installed on thread {threadId}: {(_hHook != IntPtr.Zero ? "Success" : "Failed")}");
         }
         catch (Exception ex)
         {
-            Debug.WriteLine($"[ScreenCaptureProtection] Failed to install CBT Hook: {ex.Message}");
+            MessageBox.Show($"[ScreenCaptureProtection] Failed to install CBT Hook: {ex.Message}");
         }
 
         // Also sweep any windows that may already exist on this thread
@@ -162,6 +162,7 @@ public static class ScreenCaptureProtection
     /// </summary>
     public static bool ApplyProtection(IntPtr hWnd)
     {
+        Console.WriteLine($"[ScreenCaptureProtection] Attempting protection on HWND 0x{hWnd:X}");
         if (hWnd == IntPtr.Zero || !NativeMethods.IsWindow(hWnd))
         {
             return false;

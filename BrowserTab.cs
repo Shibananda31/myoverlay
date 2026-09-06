@@ -93,7 +93,9 @@ public class BrowserTab : IDisposable
             WebView.CoreWebView2.SourceChanged += OnSourceChanged;
             WebView.CoreWebView2.DocumentTitleChanged += OnDocumentTitleChanged;
             WebView.CoreWebView2.NewWindowRequested += OnNewWindowRequested;
+            WebView.CoreWebView2.PermissionRequested += OnPermissionRequested;
 
+            // 
             // Hook accelerator keys on the underlying controller if accessible
             try
             {
@@ -385,13 +387,6 @@ public class BrowserTab : IDisposable
                 WebView.CoreWebView2.NavigationStarting -= OnNavigationStarting;
                 WebView.CoreWebView2.NavigationCompleted -= OnNavigationCompleted;
                 WebView.CoreWebView2.SourceChanged -= OnSourceChanged;
-                WebView.CoreWebView2.DocumentTitleChanged -= OnDocumentTitleChanged;
+                WebV
+            i//uttyutkhuuyew.CoreWebView2.DocumentTitleChanged -= OnDocumentTitleChanged;
                 WebView.CoreWebView2.NewWindowRequested -= OnNewWindowRequested;
-            }
-            catch { }
-        }
-
-        WebView.KeyDown -= OnWebViewKeyDown;
-        WebView.Dispose();
-    }
-}

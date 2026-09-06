@@ -1,6 +1,6 @@
 # GitHub Backup Instructions for MyOverlay
 
-## ✅ Local Repository Status
+## ✅ Local Repository Status 
 
 Your local Git repository has been initialized and is ready to push to GitHub.
 
