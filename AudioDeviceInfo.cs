@@ -7,6 +7,8 @@ public class AudioDeviceInfo
     public bool IsDefault { get; set; }
     public bool IsPlayback { get; set; }
 
+    //fytrryt
+
     public override string ToString()
     {
         return IsDefault ? $"{Name} [Default]" : Name;
