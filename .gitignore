@@ -1,0 +1,40 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio files
+.vs/
+*.user
+*.sln.docstates
+
+# IDE
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# NuGet
+packages/
+.nuget/
+
+# Application data
+AppData/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Don't commit build artifacts
+build/
+dist/
+
+# Dependencies cache
+.cache/
